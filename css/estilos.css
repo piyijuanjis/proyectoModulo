@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-:root{
-    --padding-container:100px 0;
-    --color-title:#001a49;
+:root {
+    --padding-container: 100px 0;
+    --color-title: #001a49;
 }
 
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     font-size: 2em;
     margin: 0;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
 
-.container{
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -27,7 +27,7 @@ body{
     padding: var(--padding-container);
 }
 
-.hero{
+.hero {
     width: 100%;
     height: 100vh;
     min-height: 600px;
@@ -38,14 +38,14 @@ body{
     color: #fff;
 }
 
-.hero::before{
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg,#0000008c 0%, #0000008c 100%), url(/imagenes/2_decoracion_de_interiores_moderna.jpg);
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(/imagenes/2_decoracion_de_interiores_moderna.jpg);
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
     z-index: -1;
@@ -55,18 +55,18 @@ body{
 
 /* aquí vamos a dar estilo al nav*/
 
-.nav{
-    --padding-container:0;
+.nav {
+    --padding-container: 0;
     height: 100%;
     display: flex;
-    align-items: center;   
+    align-items: center;
 }
 
-.nav__title{
-   font-weight: 300; 
+.nav__title {
+    font-weight: 300;
 }
 
-.nav__link{
+.nav__link {
     margin-left: auto;
     padding: 0;
     display: grid;
@@ -76,37 +76,37 @@ body{
 
 }
 
-.nav__items{
+.nav__items {
     list-style: none;
 }
 
-.nav__links{
+.nav__links {
     color: #fff;
     text-decoration: none;
 }
 
-.nav__menu{
+.nav__menu {
     margin-left: auto;
     cursor: pointer;
     display: none;
 
 }
 
-.nav__img{
+.nav__img {
     display: block;
     width: 30px;
 }
 
-.nav__close{
+.nav__close {
     display: var(--show, none);
 }
 
 
 /*aquí vamos a dar estilo al hero*/
 
-.hero__container{
+.hero__container {
     max-width: 800px;
-    --padding-container:0;
+    --padding-container: 0;
     display: grid;
     grid-auto-rows: max-content;
     align-content: center;
@@ -115,15 +115,15 @@ body{
     text-align: center;
 }
 
-.hero__title{
+.hero__title {
     font-size: 3em;
 }
 
-.hero__paragraph{
+.hero__paragraph {
     margin-bottom: 20px;
 }
 
-.cta{
+.cta {
     display: inline-block;
     background-color: #2091f9;
     justify-self: center;
@@ -135,21 +135,21 @@ body{
 
 /* aquí vamos a dar estilo al about*/
 
-.about{
+.about {
     text-align: center;
 }
 
-.subtitle{
+.subtitle {
     color: var(--color-title);
     font-size: 2rem;
     margin-bottom: 25px;
 }
 
-.about__paragraph{
+.about__paragraph {
     line-height: 1.7;
 }
 
-.about__main{
+.about__main {
     padding-top: 80px;
     display: grid;
     width: 90%;
@@ -159,7 +159,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
 }
 
-.about__icons{
+.about__icons {
     display: grid;
     gap: 1em;
     justify-items: center;
@@ -168,7 +168,165 @@ body{
     margin: 0 auto;
 }
 
-.about__icon{
+.about__icon {
     width: 40px;
 
 }
+
+/*aquí empezamos con presupuesto*/
+
+.presupuesto {
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    overflow: hidden;
+}
+
+.presupuesto__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.presupuesto__picture {
+    max-width: 500px;
+}
+
+.presupuesto__paragraph {
+    line-height: 1, 7;
+    margin-bottom: 15px;
+}
+
+.presupuesto__img {
+    width: 100%;
+    display: block;
+}
+
+/*estilos de servicioss*/
+
+.servicios{
+    text-align: center;
+}
+
+.servicios__table{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.servicios__element{
+    background-color: #e5e5f7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: #696871;
+    --color-servicios: #1d293f;
+    --bg-cta: #fff;
+    --color-cta: #5454d4;
+    --color-items: #696871;
+}
+
+.servicios__element--best{
+    background-color: #ff7143;
+    --color-plan: rgb(255 255 255 / 75%);
+    --color-servicios: #fff;
+    --bg-cta: #9f3919;
+    --color-cta: #fff;
+    --color-items: #fff;
+    width: 370px;
+    padding: 60px 40px;
+}
+
+.servicios__name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.servicios__servicios{
+    font-size: 2.5rem;
+    color: var(--color-servicios);
+}
+
+.servicios__items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+
+.servicios__cta{
+    background-color: var(--bg-cta);
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-cta);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+/*aquí vamos a dar estilo a la sección de los testimonios*/
+
+.testimony{
+    background-color: #e5e5f7;
+}
+
+.testimony__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+
+.testimony__body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.testimony__body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.testimony__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.testimony__texts{
+    max-width: 700px;
+}
+
+.testimony__course{
+    background-color: royalblue;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}
+
+.testimony__arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
