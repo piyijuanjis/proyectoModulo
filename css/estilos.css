@@ -38,6 +38,7 @@ body {
     color: #fff;
 }
 
+/*hero de la página de inicio*/
 .hero::before {
     content: "";
     position: absolute;
@@ -51,7 +52,61 @@ body {
     z-index: -1;
 }
 
+/*hero de la página de sobrenosotros*/
+.hero1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(/imagenes/cocina.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
 
+/*hero de la página de blog*/
+.hero2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(/imagenes/salon.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+/*hero de la página de contacto*/
+.hero3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(/imagenes/salon2.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+/*hero de la página de presupuesto*/
+.hero4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(/imagenes/salon3.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
 
 /* aquí vamos a dar estilo al nav*/
 
@@ -206,11 +261,11 @@ body {
 
 /*estilos de servicioss*/
 
-.servicios{
+.servicios {
     text-align: center;
 }
 
-.servicios__table{
+.servicios__table {
     padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
@@ -219,7 +274,7 @@ body {
     align-items: center;
 }
 
-.servicios__element{
+.servicios__element {
     background-color: #e5e5f7;
     text-align: center;
     border-radius: 10px;
@@ -232,7 +287,7 @@ body {
     --color-items: #696871;
 }
 
-.servicios__element--best{
+.servicios__element--best {
     background-color: #ff7143;
     --color-plan: rgb(255 255 255 / 75%);
     --color-servicios: #fff;
@@ -243,18 +298,18 @@ body {
     padding: 60px 40px;
 }
 
-.servicios__name{
+.servicios__name {
     color: var(--color-plan);
     margin-bottom: 15px;
     font-weight: 300;
 }
 
-.servicios__servicios{
+.servicios__servicios {
     font-size: 2.5rem;
     color: var(--color-servicios);
 }
 
-.servicios__items{
+.servicios__items {
     margin-top: 35px;
     display: grid;
     gap: 1em;
@@ -264,7 +319,7 @@ body {
     color: var(--color-items);
 }
 
-.servicios__cta{
+.servicios__cta {
     background-color: var(--bg-cta);
     display: block;
     padding: 20px 0;
@@ -277,18 +332,18 @@ body {
 
 /*aquí vamos a dar estilo a la sección de los testimonios*/
 
-.testimony{
+.testimony {
     background-color: #e5e5f7;
 }
 
-.testimony__container{
+.testimony__container {
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     gap: 1em;
     align-items: center;
 }
 
-.testimony__body{
+.testimony__body {
     display: grid;
     grid-template-columns: 1fr max-content;
     justify-content: space-between;
@@ -300,13 +355,13 @@ body {
     pointer-events: none;
 }
 
-.testimony__body--show{
+.testimony__body--show {
     pointer-events: unset;
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
 }
 
-.testimony__img{
+.testimony__img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -314,39 +369,40 @@ body {
     object-position: 50% 30%;
 }
 
-.testimony__texts{
+.testimony__texts {
     max-width: 700px;
 }
 
-.testimony__course{
+.testimony__course {
     background-color: royalblue;
     color: #fff;
     display: inline-block;
     padding: 5px;
 }
 
-.testimony__arrow{
+.testimony__arrow {
     width: 90%;
     cursor: pointer;
 }
 
 /*Footer!!!*/
 
-.footer{
+.footer {
     background-color: #1d293f;
 }
 
-.footer__title{
+.footer__title {
     font-weight: 300;
     font-size: 2rem;
     margin-bottom: 30px;
 }
 
-.footer__title, .footer__newsletter{
+.footer__title,
+.footer__newsletter {
     color: #fff;
 }
 
-.footer__container{
+.footer__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -354,7 +410,7 @@ body {
     padding-bottom: 60px;
 }
 
-.nav--footer{
+.nav--footer {
     padding-bottom: 20px;
     display: grid;
     gap: 1em;
@@ -362,20 +418,20 @@ body {
     height: 100%;
 }
 
-.nav__link--footer{
+.nav__link--footer {
     display: flex;
     margin: 0;
     margin-right: 20px;
     flex-wrap: wrap;
 }
 
-.footer__imputs{
+.footer__imputs {
     margin-top: 10px;
     display: flex;
     overflow: hidden;
 }
 
-.footer__imput{
+.footer__imput {
     background-color: #fff;
     height: 50px;
     display: block;
@@ -387,7 +443,7 @@ body {
     margin-right: 16px;
 }
 
-.footer__submit{
+.footer__submit {
     margin-left: auto;
     display: inline-block;
     height: 50px;
@@ -397,22 +453,73 @@ body {
     font-size: 1rem;
     color: #fff;
     border-radius: 6px;
+    cursor: pointer;
 }
 
-.footer__copy{
-    --padd-container:30px 0;
+.footer__copy {
+    --padd-container: 30px 0;
     text-align: center;
     color: #fff;
 }
 
-.footer__copyright{
+.footer__copyright {
     font-weight: 300;
 }
 
-.footer__icons{
+.footer__icons {
     margin-bottom: 10px;
 }
 
-.footer__img{
+.footer__img {
     width: 30px;
 }
+
+#map {
+    height: 350px;
+    width: 900px;
+}
+
+/*estilos del formulario de contacto*/
+
+.formulario {
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    text-align: center;
+}
+
+.form__imput {
+    background-color: #fff;
+    height: 50px;
+    width: 1500px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    margin-right: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form__submit {
+    margin-left: auto;
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    padding: 0 20px;
+    background-color: #2091f9;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.aviso {
+    font-size: 13px;
+    color: #0e0e0e;
+}
+
+

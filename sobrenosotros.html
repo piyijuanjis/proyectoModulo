@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <title>Espacio interior</title>
+</head>
+
+<body>
+
+    <header class="hero hero1">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__titulo">Espacio interior</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="index.html" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="sobrenosotros.html" class="nav__links">Sobre nosotros</a>
+                </li>
+                <li class="nav__items">
+                    <a href="contacto.html" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="blog.html" class="nav__links">Blog</a>
+                </li>
+                <img src="imagenes/salirmenu.svg" class="nav__close">
+            </ul>
+            <div class="nav__menu">
+                <img src="imagenes/menu.svg" class="nav__img">
+            </div>
+        </nav>
+        <section class="hero__container container">
+            <h1 class="hero__title">Tu empresa de decoración interior</h1>
+            <p class="hero__paragraph">Ofrecemos un servicio integral de decoración de interiores que abarca desde la
+                planificación hasta la ejecución, asegurando que cada detalle sea perfecto y que cada proyecto sea
+                único.</p>
+            <a href="#" class="cta">saber más</a>
+        </section>
+    </header>
+
+    <main>
+        <section class="container about">
+            <h2 class="subtitle">Conoce Nuestra Empresa</h2>
+            <p class="about paragraph">Bienvenidos a Espacio Interior, una empresa especializada en la creación de
+                espacios hermosos y acogedores. Desde el año 2000, hemos estado trabajando arduamente para proporcionar
+                servicios de alta calidad y soluciones personalizadas para cada uno de nuestros clientes.
+
+                Nuestro equipo está compuesto por expertos en diseño de interiores, arquitectos y artesanos, todos con
+                una pasión por crear espacios que combinen la funcionalidad con la estética y reflejen la personalidad y
+                estilo de vida de nuestros clientes.
+
+                Creemos que cada espacio tiene su propia historia que contar, y es por eso que trabajamos en estrecha
+                colaboración con nuestros clientes para entender sus necesidades y objetivos de diseño. Ya sea que esté
+                buscando una actualización rápida de una habitación o una remodelación completa de su hogar, estamos
+                aquí para ayudarle a crear el hogar de sus sueños.
+
+                En Espacio Interior, valoramos la calidad y la atención al detalle en todo lo que hacemos. Nos
+                enorgullece utilizar materiales y productos de alta calidad, y trabajamos con los mejores proveedores y
+                fabricantes del mercado para garantizar que nuestros proyectos sean duraderos, funcionales y hermosos.
+
+                Gracias por visitar nuestra página web. Esperamos tener la oportunidad de trabajar juntos y ayudarle a
+                transformar su hogar en un espacio hermoso y funcional que refleje su estilo de vida y personalidad.</p>
+
+        </section>
+
+        <section class="presupuesto">
+            <div class="presupuesto__container container">
+                <div class="presupuesto__texts">
+                    <h2 class="subtitle">¿Dónde estamos?</h2>
+                    <p class="presupuesto__paragraph">Nuestra
+                        ubicación central nos permite trabajar con clientes en toda la región, brindando servicios de
+                        diseño de interiores de alta calidad y soluciones personalizadas para hogares, oficinas y
+                        espacios comerciales.
+
+                        Nuestras instalaciones están diseñadas para brindar un ambiente cómodo y acogedor a nuestros
+                        clientes. Desde el momento en que ingresas a nuestra oficina, te sentirás como en casa. Contamos
+                        con una amplia variedad de muestras de materiales y productos para que puedas ver y tocar, así
+                        como también para inspirarte en la creación de tu propio espacio de ensueño.</p>
+                </div>
+
+                <figure class="presupuesto__picture">
+                    <div id="map"></div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="servicios container">
+
+            <div class="servicios__table">
+
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">NUESTRA EXPERIENCIA</h3>
+                    <div class="servicios__items">
+                        <p class="servicios__features">Con más de 20 años de experiencia en el campo de la decoración de
+                            interiores, podemos decir con orgullo que hemos visto todo y hecho todo. Nuestro equipo de
+                            profesionales altamente capacitados ha trabajado en una amplia variedad de proyectos de
+                            decoración de interiores, desde hogares hasta oficinas y espacios comerciales.</p>
+                    </div>
+
+                </div>
+
+                <div class="servicios__element servicios__element--best">
+                    <h3 class="servicios__servicios">ESPECIALISTAS EN</h3>
+                    <div class="servicios__items">
+                        <p class="servicios__features">Nos especializamos en diseños modernos y elegantes que combinan
+                            la funcionalidad con la belleza. Nos esforzamos por crear espacios únicos que reflejen la
+                            individualidad de nuestros clientes. Para lograrlo, trabajamos con una amplia variedad de
+                            estilos y materiales de decoración, desde lo tradicional hasta lo contemporáneo, pasando por
+                            lo rústico y lo minimalista.</p>
+                    </div>
+
+                </div>
+
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">NUESTROS SERVICIOS</h3>
+                    <div class="servicios__items">
+                        <p class="servicios__features">Ofrecemos una amplia variedad de servicios de decoración de
+                            interiores para satisfacer las necesidades de nuestros clientes. Desde el diseño de espacios
+                            interiores hasta la selección de colores y materiales, nuestro equipo
+                            trabaja con nuestros clientes para crear soluciones personalizadas que reflejen su
+                            estilo y personalidad.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Espacio Interior</h2>
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="index.html" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="sobrenosotros.html" class="nav__links">Sobre nosotros</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="contacto.html" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="blog.html" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <form class="footer__form">
+                <h2 class="footer__newsletter">Nos ponemos en contacto contigo</h2>
+                <div class="footer__imputs">
+                    <input type="email" name="Email" placeholder="Email:" class="footer__imput">
+                    <input type="submit" value="Empieza tu decoración ya" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="imagenes/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="imagenes/instagram.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="imagenes/twitter.svg" class="footer__img"></a>
+            </div>
+            <h3 class="footer__copyright">Derechos reservados &copy; Piyi Juanjis</h3>
+        </section>
+    </footer>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
