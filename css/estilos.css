@@ -582,6 +582,24 @@ body {
 
 }
 
+/*estilo de la validación de registro*/
+
+.ok{
+    text-align: center;
+    width: 50%;
+    padding: 12px;
+    background-color: #1e6;
+    color: #fff;
+}
+
+.bad{
+    text-align: center;
+    width: 50%;
+    padding: 12px;
+    background-color: #a22;
+    color: #fff;
+}
+
 
 /*estilo de las fotos del blog*/
 
