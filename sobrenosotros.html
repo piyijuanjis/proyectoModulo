@@ -36,6 +36,9 @@
                 <li class="nav__items">
                     <a href="blog.html" class="nav__links">Blog</a>
                 </li>
+                <li class="nav__items">
+                    <a href="" id="inicioDeSesion" class="nav__links"><img src="imagenes/iniciosesion.svg"></a>
+                </li>
                 <img src="imagenes/salirmenu.svg" class="nav__close">
             </ul>
             <div class="nav__menu">
@@ -52,6 +55,43 @@
     </header>
 
     <main>
+
+        <aside id="miModal" class="modal">
+            <div class="modal__contenido">
+                <span class="modal__cerrar">&times;</span>
+                <!-- contenido del modal aquí -->
+                <h2 class="subtitle">Iniciar sesión</h2>
+                <form action="submeter-formulario.php" class="form__imputs1" method="post">
+
+                    <p>
+                        <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio"
+                            class="form__imput" placeholder="Escribe tu Email">
+                    </p>
+
+                    <p>
+                        <label for="contrasena" class="colocar_contrasena">Contraseña
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="password" name="introducir_contrasena" class="form__imput" id="contrasena"
+                            required="obligatorio" placeholder="Introduce tu Contraseña">
+                    </p>
+
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>
+
+                    <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
+                        <p>Acceder</p>
+                    </button>
+
+                    <p class="aviso">¿Aún no tienes cuenta? <a href="inicioSesion.html">Crea tu cuenta ya</a></p>
+
+                </form>
+            </div>
+        </aside>
         <section class="container about">
             <h2 class="subtitle">Conoce Nuestra Empresa</h2>
             <p class="about paragraph">Bienvenidos a Espacio Interior, una empresa especializada en la creación de
@@ -181,6 +221,7 @@
     <script src="js/app.js"></script>
     <script src="js/mapa.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>

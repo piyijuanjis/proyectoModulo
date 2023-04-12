@@ -31,6 +31,10 @@
         <li class="nav__items">
           <a href="blog.html" class="nav__links">Blog</a>
         </li>
+        <li class="nav__items">
+          <a href="" id="inicioDeSesion" class="nav__links"><img src="imagenes/iniciosesion.svg"></a>
+        </li>
+
         <img src="imagenes/salirmenu.svg" class="nav__close">
       </ul>
       <div class="nav__menu">
@@ -46,6 +50,45 @@
   </header>
 
   <main>
+
+
+    <aside id="miModal" class="modal">
+      <div class="modal__contenido">
+        <span class="modal__cerrar">&times;</span>
+        <!-- contenido del modal aquí -->
+        <h2 class="subtitle">Iniciar sesión</h2>
+        <form action="submeter-formulario.php" class="form__imputs1" method="post">
+
+          <p>
+            <label for="email" class="colocar_email">Email
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="email" name="introducir_email" id="email" required="obligatorio" class="form__imput"
+              placeholder="Escribe tu Email">
+          </p>
+
+          <p>
+            <label for="contrasena" class="colocar_contrasena">Contraseña
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="password" name="introducir_contrasena" class="form__imput" id="contrasena"
+              required="obligatorio" placeholder="Introduce tu Contraseña">
+          </p>
+
+          <p class="aviso">
+            <span class="obligatorio"> * </span>los campos son obligatorios.
+          </p>
+
+          <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
+            <p>Acceder</p>
+          </button>
+
+          <p class="aviso">¿Aún no tienes cuenta? <a href="inicioSesion.html">Crea tu cuenta ya</a></p>
+
+        </form>
+      </div>
+    </aside>
+
     <section class="container about">
       <h2 class="subtitle">Nuestra filosofía</h2>
       <p class="about paragraph">En nuestra empresa de decoración interior, estamos comprometidos con la calidad en
@@ -64,8 +107,8 @@
           <img src="imagenes/calidad.svg" class="about__icon">
           <h3 class="about__title">Control de calidad</h3>
           <p class="about__paragraph">Durante todo el proceso de trabajo, supervisamos cada detalle para asegurarnos de
-            que se cumplan los más altos estándares de calidad. Además, realizamos inspecciones finales para asegurarnos
-            de que el resultado final sea impecable.</p>
+            que se cumplan los más altos estándares de calidad, realizamos inspecciones finales para asegurarnos
+            de que el resultado sea impecable.</p>
         </article>
 
         <article class="about__icons">
@@ -81,8 +124,10 @@
       <div class="presupuesto__container container">
         <div class="presupuesto__texts">
           <h2 class="subtitle">¿Buscas una decoración interior profesional para tu hogar?</h2>
-          <p class="presupuesto__paragraph">Abordar en su totalidad el proyecto de tu nueva casa es un acierto. Pero no es una tarea fácil. Lo más inteligente es pedir ayuda profesional. Plantearse prioridades, presupuestos y buscar la mayor calidad.</p>
-          <a href="presupuesto.html" class="cta">Solicita un presupuesto ahora</a>
+          <p class="presupuesto__paragraph">Abordar en su totalidad el proyecto de tu nueva casa es un acierto. Pero no
+            es una tarea fácil. Lo más inteligente es pedir ayuda profesional. Plantearse prioridades, presupuestos y
+            buscar la mayor calidad.</p>
+          <a href="contacto.html" class="cta">Solicita un presupuesto ahora</a>
         </div>
 
         <figure class="presupuesto__picture">
@@ -95,9 +140,10 @@
       <h2 class="subtitle">Servicios de interiorismo</h2>
 
       <div class="servicios__table">
-        
+
         <div class="servicios__element">
-          <p class="servicios__name">¿Estás buscando servicios de reformas, decoración, diseño e interiorismo en tu oficina? Aldea Decoración es tu solución.</p>
+          <p class="servicios__name">¿Estás buscando servicios de reformas, decoración, diseño e interiorismo en tu
+            oficina? Aldea Decoración es tu solución.</p>
           <h3 class="servicios__servicios">OFICINAS</h3>
 
           <div class="servicios__items">
@@ -110,7 +156,8 @@
         </div>
 
         <div class="servicios__element servicios__element--best">
-          <p class="servicios__name">Realizamos proyectos de decoración, reformas, diseño e interiorismo en Málaga, en pisos, apartamentos y casas unifamiliares.</p>
+          <p class="servicios__name">Realizamos proyectos de decoración, reformas, diseño e interiorismo en Málaga, en
+            pisos, apartamentos y casas unifamiliares.</p>
           <h3 class="servicios__servicios">VIVIENDAS</h3>
 
           <div class="servicios__items">
@@ -123,7 +170,8 @@
         </div>
 
         <div class="servicios__element">
-          <p class="servicios__name">Soluciones de interiorismo en Málaga, diseño de interiores y decoración para tiendas, locales comerciales, comercios, restaurantes, hoteles...</p>
+          <p class="servicios__name">Soluciones de interiorismo en Málaga, diseño de interiores y decoración para
+            tiendas, locales comerciales, comercios, restaurantes, hoteles...</p>
           <h3 class="servicios__servicios">LOCALES</h3>
 
           <div class="servicios__items">
@@ -140,11 +188,14 @@
     <section class="testimony">
       <div class="testimony__container container">
         <img src="imagenes/arrowleft.svg" class="testimony__arrow" id="before">
-        
+
         <section class="testimony__body testimony__body--show" data-id="1">
           <div class="testimony__texts">
             <h2 class="subtitle"> Mi nombre es Ana López, <span class="testimony__course"> Cliente</span></h2>
-            <p class="testimony__review">Estoy muy feliz con el servicio que recibí de esta empresa de decoración de interiores. El personal fue muy amable y servicial en todo momento. Me encantó cómo transformaron mi sala de estar en un espacio acogedor y elegante. Los colores y la disposición de los muebles son perfectos. Definitivamente recomendaría sus servicios a cualquiera que busque un cambio de imagen en su hogar.</p>
+            <p class="testimony__review">Estoy muy feliz con el servicio que recibí de esta empresa de decoración de
+              interiores. El personal fue muy amable y servicial en todo momento. Me encantó cómo transformaron mi sala
+              de estar en un espacio acogedor y elegante. Los colores y la disposición de los muebles son perfectos.
+              Definitivamente recomendaría sus servicios a cualquiera que busque un cambio de imagen en su hogar.</p>
           </div>
 
           <figure class="testimony__picture">
@@ -155,7 +206,11 @@
         <section class="testimony__body" data-id="2">
           <div class="testimony__texts">
             <h2 class="subtitle"> Mi nombre es Eva Pérez, <span class="testimony__course">Cliente</span></h2>
-            <p class="testimony__review">No podría estar más satisfecha con el trabajo de esta empresa de decoración de interiores. Ellos hicieron un excelente trabajo en mi comedor y en mi cocina. Me encantó cómo lograron combinar mi estilo personal con las últimas tendencias en decoración. También me gustó mucho que me mantuvieran informada durante todo el proceso. Definitivamente los recomendaría a cualquiera que busque una empresa de decoración de interiores de calidad.</p>
+            <p class="testimony__review">No podría estar más satisfecha con el trabajo de esta empresa de decoración de
+              interiores. Ellos hicieron un excelente trabajo en mi comedor y en mi cocina. Me encantó cómo lograron
+              combinar mi estilo personal con las últimas tendencias en decoración. También me gustó mucho que me
+              mantuvieran informada durante todo el proceso. Definitivamente los recomendaría a cualquiera que busque
+              una empresa de decoración de interiores de calidad.</p>
           </div>
 
           <figure class="testimony__picture">
@@ -165,8 +220,12 @@
 
         <section class="testimony__body" data-id="3">
           <div class="testimony__texts">
-            <h2 class="subtitle"> Mi nombre es Daniel Gil, <span class="testimony__course"> Decorador de interiores</span></h2>
-            <p class="testimony__review">La calidad del trabajo de esta empresa de decoración de interiores es excepcional. Me encantó cómo transformaron mi habitación en un espacio moderno y con estilo. Los detalles fueron increíbles, desde la elección del mobiliario hasta la iluminación. Además, el personal fue muy profesional y respetuoso. Definitivamente volvería a contratar sus servicios.</p>
+            <h2 class="subtitle"> Mi nombre es Daniel Gil, <span class="testimony__course"> Decorador de
+                interiores</span></h2>
+            <p class="testimony__review">La calidad del trabajo de esta empresa de decoración de interiores es
+              excepcional. Me encantó cómo transformaron mi habitación en un espacio moderno y con estilo. Los detalles
+              fueron increíbles, desde la elección del mobiliario hasta la iluminación. Además, el personal fue muy
+              profesional y respetuoso. Definitivamente volvería a contratar sus servicios.</p>
           </div>
 
           <figure class="testimony__picture">
@@ -176,7 +235,7 @@
 
         <img src="imagenes/arrowright.svg" class="testimony__arrow" id="next">
       </div>
-      
+
     </section>
   </main>
 
@@ -221,6 +280,7 @@
 
   <script src="js/app.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
@@ -16,7 +17,7 @@
 
 <body>
 
-    <header class="hero hero2">
+    <header class="hero hero4">
         <nav class="nav container">
             <div class="nav__logo">
                 <h2 class="nav__titulo">Espacio interior</h2>
@@ -52,6 +53,7 @@
             <a href="#" class="cta">saber más</a>
         </section>
     </header>
+
 
     <main>
 
@@ -92,80 +94,59 @@
             </div>
         </aside>
 
-        <section class="servicios container">
-            <h2 class="subtitle">Blog</h2>
-            <p class="about paragraph">Artículos y consejos sobre tendencias de decoración, técnicas de diseño,
-                soluciones creativas y otras ideas relacionadas con el tema. Los artículos incluyen fotografías y una
-                descripción que ilustran ejemplos prácticos.</p>
+        <section class="container about">
+            <h2 class="subtitle">Bienvenido al área de registro</h2>
+            <p class="about paragraph">Bienvenidos a nuestra empresa de decoración de interiores, donde transformamos
+                espacios en hogares acogedores y únicos. Nuestro equipo de diseñadores y expertos en decoración trabaja
+                en estrecha colaboración con nuestros clientes para crear diseños personalizados que reflejen su estilo
+                y personalidad.
+            </p>
+        </section>
 
-            <div class="servicios__table">
+        <section class="formulario">
+            <div class="container">
+                <form action="submeter-formulario.php" class="form__imputs1" method="post">
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">Cocina</h3>
-                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
-                        expuesta y ventana que proporciona iluminación natural.</p>
-                    <div class="servicios__items">
-                        <img src="imagenes/cocina.jpg" class="servicios__foto">
-                    </div>
-                </div>
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">Salón</h3>
-                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
-                        expuesta y ventana que proporciona iluminación natural.</p>
-                    <div class="servicios__items">
-                        <img src="imagenes/salon.jpg" class="servicios__foto">
-                    </div>
-                </div>
+                    <p>
+                        <label for="usuario" class="colocar_nombre">Usuario
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_usuario" id="usuario" required="obligatorio"
+                            class="form__imput" placeholder="Escribe tu usuario">
+                    </p>
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">Salón</h3>
-                    <p class="servicios__name">Salón acogedor con paredes beige, sofá cómodo, iluminación suave y
-                        estantería rústica llena de libros y adornos.</p>
-                    <div class="servicios__items">
-                        <img src="imagenes/salon1.jpg" class="servicios__foto">
-                    </div>
-                </div>
+                    <p>
+                        <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio"
+                            class="form__imput" placeholder="Escribe tu Email">
+                    </p>
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">Salón</h3>
-                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
-                        expuesta y ventana que proporciona iluminación natural.</p>
-                    <div class="servicios__items">
-                        <img src="imagenes/salon2.jpg" class="servicios__foto">
-                    </div>
-                </div>
+                    <p>
+                        <label for="contrasena" class="colocar_contrasena">Asunto
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="password" name="introducir_contrasena" class="form__imput" id="contrasena"
+                            required="obligatorio" placeholder="Escribe tu contrasena">
+                    </p>
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">Salón</h3>
-                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
-                        expuesta y ventana que proporciona iluminación natural.</p>
-                    <div class="servicios__items">
-                        <img src="imagenes/salon3.jpg" class="servicios__foto">
-                    </div>
-                </div>
+                    <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
+                        <p>Registrarme</p>
+                    </button>
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">Salón</h3>
-                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
-                        expuesta y ventana que proporciona iluminación natural.</p>
-                    <div class="servicios__items">
-                        <img src="imagenes/salon.jpg" class="servicios__foto">
-                    </div>
-                </div>
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">Salón</h3>
-                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
-                        expuesta y ventana que proporciona iluminación natural.</p>
-                    <div class="servicios__items">
-                        <img src="imagenes/salon1.jpg" class="servicios__foto">
-                    </div>
-                </div>
-
+                </form>
             </div>
         </section>
     </main>
+
+
+
 
     <footer class="footer">
         <section class="footer__container container">
