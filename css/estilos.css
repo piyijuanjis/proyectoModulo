@@ -584,7 +584,7 @@ body {
 
 /*estilo de la validación de registro*/
 
-.ok{
+.ok {
     text-align: center;
     width: 50%;
     padding: 12px;
@@ -592,7 +592,7 @@ body {
     color: #fff;
 }
 
-.bad{
+.bad {
     text-align: center;
     width: 50%;
     padding: 12px;
@@ -606,7 +606,46 @@ body {
 .servicios__foto {
     max-width: 100%;
     height: auto;
+    cursor: pointer;
+    transition: .3s;
+
+    position: relative;
+    display: inline-block;
 }
+
+.servicios__foto:hover {
+    transform: scale(1.5);
+
+    z-index: 1;
+}
+
+.servicios__items img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.servicios__items__modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.servicios__items__modal img {
+    max-height: 80vh;
+    max-width: 80vw;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
 
 /*aquí vamos a dar estilo al menu hamburguesa para q sea responsive*/
 

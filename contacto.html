@@ -51,7 +51,6 @@
             <p class="hero__paragraph">Ofrecemos un servicio integral de decoración de interiores que abarca desde la
                 planificación hasta la ejecución, asegurando que cada detalle sea perfecto y que cada proyecto sea
                 único.</p>
-            <a href="#" class="cta">saber más</a>
         </section>
     </header>
 
@@ -108,7 +107,7 @@
 
         <section class="formulario">
             <div class="container">
-                <form action="submeter-formulario.php" class="form__imputs1" method="post">
+                <form class="form__imputs1" method="post">
 
 
                     <p>
@@ -128,7 +127,7 @@
                     </p>
 
                     <p>
-                        <label for="telefone" class="colocar_telefono">Teléfono
+                        <label for="telefono" class="colocar_telefono">Teléfono
                         </label>
                         <input type="tel" name="introducir_telefono" class="form__imput" id="telefono"
                             placeholder="Escribe tu teléfono">
@@ -160,6 +159,7 @@
                     </p>
 
                 </form>
+
             </div>
         </section>
     </main>
@@ -206,6 +206,10 @@
     <script src="js/app.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/modal.js"></script>
+    
 </body>
+<?php
+                    include("formulario_contacto.php");
+                    ?>
 
 </html>
