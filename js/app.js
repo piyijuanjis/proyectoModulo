@@ -7,16 +7,7 @@
     const sliders = [...document.querySelectorAll('.testimony__body')];
     const buttonNext = document.querySelector('#next');
     const buttonBefore = document.querySelector('#before');
-
     let value;
-
-    buttonNext.addEventListener('click', () => {
-        changePosition(1);
-    });
-
-    buttonBefore.addEventListener('click', () => {
-        changePosition(-1);
-    });
 
     const changePosition = (add) => {
         const currentTestimony = document.querySelector('.testimony__body--show').dataset.id;
@@ -29,8 +20,21 @@
         }
 
         sliders[value - 1].classList.add('testimony__body--show');
+    };
 
-    }
+    const nextSlide = () => {
+        changePosition(1);
+    };
 
+    const startInterval = () => {
+        setInterval(nextSlide, 5000); // Cambia de testimonio cada 5 segundos (5000 milisegundos)
+    };
+
+    buttonNext.addEventListener('click', nextSlide);
+    buttonBefore.addEventListener('click', () => {
+        changePosition(-1);
+    });
+    startInterval(); // Inicia el intervalo al cargar la página
 })();
+
 

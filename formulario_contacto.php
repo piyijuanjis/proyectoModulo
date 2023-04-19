@@ -16,10 +16,7 @@
             if ($resultado) {
                 ?>
                 <h3 class="ok">¡Te has inscrito correctamente!</h3>
-                <p>Serás redirigido automáticamente en unos segundos...</p>
                 <?php
-                header("Refresh: 10; url=index.html");  
-                exit();
             } else {
                 ?>
                 <h3 class="bad">¡!ups ha ocurrido un error</h3>

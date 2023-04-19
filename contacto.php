@@ -34,6 +34,9 @@
                     <a href="contacto.html" class="nav__links">Contacto</a>
                 </li>
                 <li class="nav__items">
+                    <a href="" class="nav__links">Nuestros trabajos</a>
+                </li>
+                <li class="nav__items">
                     <a href="blog.html" class="nav__links">Blog</a>
                 </li>
                 <li class="nav__items">
@@ -154,14 +157,19 @@
                     <span class="obligatorio"> * </span>los campos son obligatorios.
                 </p>
 
+
             </form>
             <?php
             include("formulario_contacto.php");
             ?>
 
         </div>
+
     </section>
+    
+
     </main>
+
 
     <footer class="footer">
         <section class="footer__container container">
@@ -176,6 +184,9 @@
                     </li>
                     <li class="nav__items">
                         <a href="contacto.html" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="" class="nav__links">Nuestros trabajos</a>
                     </li>
                     <li class="nav__items">
                         <a href="blog.html" class="nav__links">Blog</a>
@@ -205,6 +216,7 @@
     <script src="js/app.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/modal.js"></script>
+
     
 </body>
 
