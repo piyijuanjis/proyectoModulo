@@ -331,6 +331,26 @@ body {
     box-shadow: 0 0 1px rgba(0, 0, 0, .5);
 }
 
+/* Estilo ampliado del div */
+.servicios__element.ampliado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    z-index: 2;
+  }
+  
+  /* Estilo del botón "Cerrar" dentro del div ampliado */
+  .servicios__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
 /*aquí vamos a dar estilo a la sección de los testimonios*/
 
 .testimony {

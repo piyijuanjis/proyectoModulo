@@ -17,7 +17,7 @@
 
 <body>
 
-    <header class="hero hero1">
+    <header class="hero hero3">
         <nav class="nav container">
             <div class="nav__logo">
                 <h2 class="nav__titulo">Espacio interior</h2>
@@ -26,6 +26,9 @@
             <ul class="nav__link nav__link--menu">
                 <li class="nav__items">
                     <a href="index.html" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="sobrenosotros.html" class="nav__links">Sobre nosotros</a>
                 </li>
                 <li class="nav__items">
                     <a href="contacto.html" class="nav__links">Contacto</a>
@@ -37,11 +40,9 @@
                     <a href="blog.html" class="nav__links">Blog</a>
                 </li>
                 <li class="nav__items">
-                    <a href="presupuesto.html" class="nav__links">Presupuesto</a>
-                </li>
-                <li class="nav__items">
                     <a href="" id="inicioDeSesion" class="nav__links"><img src="imagenes/iniciosesion.svg"></a>
                 </li>
+
                 <img src="imagenes/salirmenu.svg" class="nav__close">
             </ul>
             <div class="nav__menu">
@@ -63,7 +64,7 @@
                 <span class="modal__cerrar">&times;</span>
                 <!-- contenido del modal aquí -->
                 <h2 class="subtitle">Iniciar sesión</h2>
-                <form action="php/comprueba_login.php" class="form__imputs1" method="post">
+                <form action="submeter-formulario.php" class="form__imputs1" method="post">
 
                     <p>
                         <label for="email" class="colocar_email">Email
@@ -94,92 +95,81 @@
                 </form>
             </div>
         </aside>
+        
         <section class="container about">
-            <h2 class="subtitle">Conoce Nuestra Empresa</h2>
-            <p class="about paragraph">Bienvenidos a Espacio Interior, una empresa especializada en la creación de
-                espacios hermosos y acogedores. Desde el año 2000, hemos estado trabajando arduamente para proporcionar
-                servicios de alta calidad y soluciones personalizadas para cada uno de nuestros clientes.
-
-                Nuestro equipo está compuesto por expertos en diseño de interiores, arquitectos y artesanos, todos con
-                una pasión por crear espacios que combinen la funcionalidad con la estética y reflejen la personalidad y
-                estilo de vida de nuestros clientes.
-
-                Creemos que cada espacio tiene su propia historia que contar, y es por eso que trabajamos en estrecha
-                colaboración con nuestros clientes para entender sus necesidades y objetivos de diseño. Ya sea que esté
-                buscando una actualización rápida de una habitación o una remodelación completa de su hogar, estamos
-                aquí para ayudarle a crear el hogar de sus sueños.
-
-                En Espacio Interior, valoramos la calidad y la atención al detalle en todo lo que hacemos. Nos
-                enorgullece utilizar materiales y productos de alta calidad, y trabajamos con los mejores proveedores y
-                fabricantes del mercado para garantizar que nuestros proyectos sean duraderos, funcionales y hermosos.
-
-                Gracias por visitar nuestra página web. Esperamos tener la oportunidad de trabajar juntos y ayudarle a
-                transformar su hogar en un espacio hermoso y funcional que refleje su estilo de vida y personalidad.</p>
-
+            <h2 class="subtitle">Solicita un presupuesto personalizado para la decoración de tu hogar u oficina</h2>
+            <p class="about paragraph">En Espacio Interior, nos encanta ayudar a nuestros clientes a crear espacios
+                únicos y personalizados que reflejen su estilo y necesidades. Si estás buscando transformar tu hogar
+                o
+                lugar de trabajo en un espacio acogedor y funcional, has llegado al lugar indicado. Completa el
+                siguiente formulario para recibir un presupuesto personalizado que se ajuste a tus requerimientos y
+                presupuesto. ¡Estamos ansiosos por comenzar a trabajar contigo y hacer realidad tus ideas de
+                decoración!
+            </p>
         </section>
 
-        <section class="presupuesto">
-            <div class="presupuesto__container container">
-                <div class="presupuesto__texts">
-                    <h2 class="subtitle">¿Dónde estamos?</h2>
-                    <p class="presupuesto__paragraph">Nuestra
-                        ubicación central nos permite trabajar con clientes en toda la región, brindando servicios de
-                        diseño de interiores de alta calidad y soluciones personalizadas para hogares, oficinas y
-                        espacios comerciales.
+        <section class="formulario">
+        <div class="container">
+            <form class="form__imputs1" method="post">
 
-                        Nuestras instalaciones están diseñadas para brindar un ambiente cómodo y acogedor a nuestros
-                        clientes. Desde el momento en que ingresas a nuestra oficina, te sentirás como en casa. Contamos
-                        con una amplia variedad de muestras de materiales y productos para que puedas ver y tocar, así
-                        como también para inspirarte en la creación de tu propio espacio de ensueño.</p>
-                </div>
 
-                <figure class="presupuesto__picture">
-                    <div class="mapa" id="map"></div>
-                </figure>
-            </div>
-        </section>
 
-        <section class="servicios container">
+                <p>
+                    <label for="nombre" class="colocar_nombre">Nombre
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" class="form__imput" placeholder="Escribe tu nombre">
+                </p>
 
-            <div class="servicios__table">
+                <p>
+                    <label for="email" class="colocar_email">Email
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="email" name="introducir_email" id="email" required="obligatorio" class="form__imput" placeholder="Escribe tu Email">
+                </p>
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">NUESTRA EXPERIENCIA</h3>
-                    <div class="servicios__items">
-                        <p class="servicios__features">Con más de 20 años de experiencia en el campo de la decoración de
-                            interiores, podemos decir con orgullo que hemos visto todo y hecho todo. Nuestro equipo de
-                            profesionales altamente capacitados ha trabajado en una amplia variedad de proyectos de
-                            decoración de interiores, desde hogares hasta oficinas y espacios comerciales.</p>
-                    </div>
+                <p>
+                    <label for="telefono" class="colocar_telefono">Teléfono
+                    </label>
+                    <input type="tel" name="introducir_telefono" class="form__imput" id="telefono" placeholder="Escribe tu teléfono">
+                </p>
 
-                </div>
 
-                <div class="servicios__element servicios__element--best">
-                    <h3 class="servicios__servicios">ESPECIALISTAS EN</h3>
-                    <div class="servicios__items">
-                        <p class="servicios__features">Nos especializamos en diseños modernos y elegantes que combinan
-                            la funcionalidad con la belleza. Nos esforzamos por crear espacios únicos que reflejen la
-                            individualidad de nuestros clientes. Para lograrlo, trabajamos con una amplia variedad de
-                            estilos y materiales de decoración, desde lo tradicional hasta lo contemporáneo, pasando por
-                            lo rústico y lo minimalista.</p>
-                    </div>
+                <p>
+                    <label for="asunto" class="colocar_asunto">Asunto
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_asunto" class="form__imput" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                </p>
 
-                </div>
+                <p>
+                    <label for="mensaje" class="colocar_mensaje">Mensaje
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <textarea name="introducir_mensaje" class="form__imput1" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                </p>
 
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">NUESTROS SERVICIOS</h3>
-                    <div class="servicios__items">
-                        <p class="servicios__features">Ofrecemos una amplia variedad de servicios de decoración de
-                            interiores para satisfacer las necesidades de nuestros clientes. Desde el diseño de espacios
-                            interiores hasta la selección de colores y materiales, nuestro equipo
-                            trabaja con nuestros clientes para crear soluciones personalizadas que reflejen su
-                            estilo y personalidad.</p>
-                    </div>
+                <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
+                    <p>Enviar</p>
+                </button>
 
-                </div>
-            </div>
-        </section>
+                <p class="aviso">
+                    <span class="obligatorio"> * </span>los campos son obligatorios.
+                </p>
+
+
+            </form>
+            <?php
+            include("formulario_contacto.php");
+            ?>
+
+        </div>
+
+    </section>
+    
+
     </main>
+
 
     <footer class="footer">
         <section class="footer__container container">
@@ -197,9 +187,6 @@
                     </li>
                     <li class="nav__items">
                         <a href="" class="nav__links">Nuestros trabajos</a>
-                    </li>
-                    <li class="nav__items">
-                        <a href="presupuesto.html" class="nav__links">presupuesto</a>
                     </li>
                     <li class="nav__items">
                         <a href="blog.html" class="nav__links">Blog</a>
@@ -227,9 +214,10 @@
 
 
     <script src="js/app.js"></script>
-    <script src="js/mapa.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/modal.js"></script>
+
+    
 </body>
 
 </html>
