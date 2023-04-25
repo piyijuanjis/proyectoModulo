@@ -31,10 +31,13 @@
                     <a href="sobrenosotros.html" class="nav__links">Sobre nosotros</a>
                 </li>
                 <li class="nav__items">
-                    <a href="contacto.html" class="nav__links">Contacto</a>
+                    <a href="contacto.php" class="nav__links">Contacto</a>
                 </li>
                 <li class="nav__items">
                     <a href="" class="nav__links">Nuestros trabajos</a>
+                </li>
+                <li class="nav__items">
+                    <a href="presupuesto.html" class="nav__links">presupuesto</a>
                 </li>
                 <li class="nav__items">
                     <a href="blog.html" class="nav__links">Blog</a>
@@ -110,70 +113,70 @@
 
         <section class="formulario">
             <div class="container">
-              <form class="form__imputs1" method="post">
-                <p>
-                  <label for="nombre" class="colocar_nombre">Nombre
-                    <span class="obligatorio">*</span>
-                  </label>
-                  <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
-                    class="form__imput" placeholder="Escribe tu nombre">
-                </p>
-          
-                <p>
-                  <label for="email" class="colocar_email">Email
-                    <span class="obligatorio">*</span>
-                  </label>
-                  <input type="email" name="introducir_email" id="email" required="obligatorio"
-                    class="form__imput" placeholder="Escribe tu Email">
-                </p>
-          
-                <p>
-                  <label for="tipo" class="colocar_tipo">Tipo de decoración
-                  </label>
-                  <select name="introducir_tipo" class="form__imput" id="tipo">
-                    <option value="">Selecciona el tipo de decoración que necesitas</option>
-                    <option value="oficinas">Oficinas</option>
-                    <option value="viviendas">Viviendas</option>
-                    <option value="locales">Locales</option>
-                  </select>
-                </p>
-          
-                <p>
-                  <label for="catalogo" class="colocar_catalogo">Cátalogo
-                  </label>
-                  <select name="introducir_catalogo" class="form__imput" id="catalogo">
-                    <option value="">Selecciona un artículo del cátalogo</option>
-                    <option value="sillas">Sillas</option>
-                    <option value="mesas">Mesas</option>
-                    <option value="sofas">Sofás</option>
-                    <option value="cortinas">Cortinas</option>
-                    <option value="toldos">Toldos</option>
-                    <option value="camas">Camas</option>
-                    <option value="cabeceros">Cabeceros</option>
-                    <option value="muebles">Muebles</option>
-                    <option value="encimeras">Encimeras</option>
-                  </select>
-                </p>
-          
-                <p>
-                  <label for="mensaje" class="colocar_mensaje">Mensaje
-                    <span class="obligatorio">*</span>
-                  </label>
-                  <textarea name="introducir_mensaje" class="form__imput1" id="mensaje" required="obligatorio"
-                    placeholder="Deja aquí tu comentario..."></textarea>
-                </p>
-          
-                <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
-                  <p>Enviar</p>
-                </button>
-          
-                <p class="aviso">
-                  <span class="obligatorio"> * </span>los campos son obligatorios.
-                </p>
-              </form>
+                <form class="form__imputs1" method="post">
+                    <p>
+                        <label for="nombre" class="colocar_nombre">Nombre
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                            class="form__imput" placeholder="Escribe tu nombre">
+                    </p>
+
+                    <p>
+                        <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio"
+                            class="form__imput" placeholder="Escribe tu Email">
+                    </p>
+
+                    <p>
+                        <label for="tipo" class="colocar_tipo">Tipo de decoración
+                        </label>
+                        <select name="introducir_tipo" class="form__imput" id="tipo">
+                            <option value="">Selecciona el tipo de decoración que necesitas</option>
+                            <option value="oficinas">Oficinas</option>
+                            <option value="viviendas">Viviendas</option>
+                            <option value="locales">Locales</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="catalogo" class="colocar_catalogo">Cátalogo
+                        </label>
+                        <select name="introducir_catalogo" class="form__imput" id="catalogo">
+                            <option value="">Selecciona un artículo del cátalogo</option>
+                            <option value="sillas">Sillas</option>
+                            <option value="mesas">Mesas</option>
+                            <option value="sofas">Sofás</option>
+                            <option value="cortinas">Cortinas</option>
+                            <option value="toldos">Toldos</option>
+                            <option value="camas">Camas</option>
+                            <option value="cabeceros">Cabeceros</option>
+                            <option value="muebles">Muebles</option>
+                            <option value="encimeras">Encimeras</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="mensaje" class="colocar_mensaje">Mensaje
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <textarea name="introducir_mensaje" class="form__imput1" id="mensaje" required="obligatorio"
+                            placeholder="Deja aquí tu comentario..."></textarea>
+                    </p>
+
+                    <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
+                        <p>Enviar</p>
+                    </button>
+
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>
+                </form>
             </div>
-          </section>
-          
+        </section>
+
     </main>
 
     <footer class="footer">

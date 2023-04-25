@@ -7,10 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/mediaqueries.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
     <title>Espacio interior</title>
 </head>
@@ -31,10 +29,13 @@
                     <a href="sobrenosotros.html" class="nav__links">Sobre nosotros</a>
                 </li>
                 <li class="nav__items">
-                    <a href="contacto.html" class="nav__links">Contacto</a>
+                    <a href="contacto.php" class="nav__links">Contacto</a>
                 </li>
                 <li class="nav__items">
                     <a href="" class="nav__links">Nuestros trabajos</a>
+                </li>
+                <li class="nav__items">
+                    <a href="presupuesto.html" class="nav__links">presupuesto</a>
                 </li>
                 <li class="nav__items">
                     <a href="blog.html" class="nav__links">Blog</a>
@@ -70,16 +71,14 @@
                         <label for="email" class="colocar_email">Email
                             <span class="obligatorio">*</span>
                         </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio"
-                            class="form__imput" placeholder="Escribe tu Email">
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" class="form__imput" placeholder="Escribe tu Email">
                     </p>
 
                     <p>
                         <label for="contrasena" class="colocar_contrasena">Contraseña
                             <span class="obligatorio">*</span>
                         </label>
-                        <input type="password" name="introducir_contrasena" class="form__imput" id="contrasena"
-                            required="obligatorio" placeholder="Introduce tu Contraseña">
+                        <input type="password" name="introducir_contrasena" class="form__imput" id="contrasena" required="obligatorio" placeholder="Introduce tu Contraseña">
                     </p>
 
                     <p class="aviso">
@@ -95,7 +94,7 @@
                 </form>
             </div>
         </aside>
-        
+
         <section class="container about">
             <h2 class="subtitle">Solicita un presupuesto personalizado para la decoración de tu hogar u oficina</h2>
             <p class="about paragraph">En Espacio Interior, nos encanta ayudar a nuestros clientes a crear espacios
@@ -109,64 +108,64 @@
         </section>
 
         <section class="formulario">
-        <div class="container">
-            <form class="form__imputs1" method="post">
+            <div class="container">
+                <form class="form__imputs1" method="post">
 
 
 
-                <p>
-                    <label for="nombre" class="colocar_nombre">Nombre
-                        <span class="obligatorio">*</span>
-                    </label>
-                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" class="form__imput" placeholder="Escribe tu nombre">
-                </p>
+                    <p>
+                        <label for="nombre" class="colocar_nombre">Nombre
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" class="form__imput" placeholder="Escribe tu nombre">
+                    </p>
 
-                <p>
-                    <label for="email" class="colocar_email">Email
-                        <span class="obligatorio">*</span>
-                    </label>
-                    <input type="email" name="introducir_email" id="email" required="obligatorio" class="form__imput" placeholder="Escribe tu Email">
-                </p>
+                    <p>
+                        <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" class="form__imput" placeholder="Escribe tu Email">
+                    </p>
 
-                <p>
-                    <label for="telefono" class="colocar_telefono">Teléfono
-                    </label>
-                    <input type="tel" name="introducir_telefono" class="form__imput" id="telefono" placeholder="Escribe tu teléfono">
-                </p>
-
-
-                <p>
-                    <label for="asunto" class="colocar_asunto">Asunto
-                        <span class="obligatorio">*</span>
-                    </label>
-                    <input type="text" name="introducir_asunto" class="form__imput" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
-                </p>
-
-                <p>
-                    <label for="mensaje" class="colocar_mensaje">Mensaje
-                        <span class="obligatorio">*</span>
-                    </label>
-                    <textarea name="introducir_mensaje" class="form__imput1" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
-                </p>
-
-                <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
-                    <p>Enviar</p>
-                </button>
-
-                <p class="aviso">
-                    <span class="obligatorio"> * </span>los campos son obligatorios.
-                </p>
+                    <p>
+                        <label for="telefono" class="colocar_telefono">Teléfono
+                        </label>
+                        <input type="tel" name="introducir_telefono" class="form__imput" id="telefono" placeholder="Escribe tu teléfono">
+                    </p>
 
 
-            </form>
-            <?php
-            include("formulario_contacto.php");
-            ?>
+                    <p>
+                        <label for="asunto" class="colocar_asunto">Asunto
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_asunto" class="form__imput" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                    </p>
 
-        </div>
+                    <p>
+                        <label for="mensaje" class="colocar_mensaje">Mensaje
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <textarea name="introducir_mensaje" class="form__imput1" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                    </p>
 
-    </section>
-    
+                    <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
+                        <p>Enviar</p>
+                    </button>
+
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>
+
+
+                </form>
+                <?php
+                include("formulario_contacto.php");
+                ?>
+
+            </div>
+
+        </section>
+
 
     </main>
 
@@ -217,7 +216,7 @@
     <script src="js/menu.js"></script>
     <script src="js/modal.js"></script>
 
-    
+
 </body>
 
 </html>

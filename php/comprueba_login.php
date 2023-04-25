@@ -28,10 +28,9 @@
             header("location:administrador.php");
             
         }else{
-            header("location:index.html");
+            //echo("contraseña no válida");
+            header("location:../index.html");
         }
-
-
 
 
     }catch (Exception $e){
