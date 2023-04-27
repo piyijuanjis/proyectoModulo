@@ -46,40 +46,7 @@
 
     <main>
 
-        <aside id="miModal" class="modal">
-            <div class="modal__contenido">
-                <span class="modal__cerrar">&times;</span>
-                <!-- contenido del modal aquí -->
-                <h2 class="subtitle">Iniciar sesión</h2>
-                <form action="php/comprueba_login.php" class="form__imputs1" method="post">
 
-                    <p>
-                        <label for="email" class="colocar_email">Email
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio" class="form__imput" placeholder="Escribe tu Email">
-                    </p>
-
-                    <p>
-                        <label for="contrasena" class="colocar_contrasena">Contraseña
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="password" name="introducir_contrasena" class="form__imput" id="contrasena" required="obligatorio" placeholder="Introduce tu Contraseña">
-                    </p>
-
-                    <p class="aviso">
-                        <span class="obligatorio"> * </span>los campos son obligatorios.
-                    </p>
-
-                    <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
-                        <p>Acceder</p>
-                    </button>
-
-                    <p class="aviso">¿Aún no tienes cuenta? <a href="inicioSesion.html">Crea tu cuenta ya</a></p>
-
-                </form>
-            </div>
-        </aside>
 
 
         <section class="container about">
@@ -129,26 +96,49 @@
             </div>
         </section>
 
+        <section class="formulario">
 
-        <section class="presupuesto">
-            <div class="presupuesto__container container">
-                <div class="presupuesto__texts">
-                    <h2 class="subtitle">¿Dónde estamos?</h2>
-                    <p class="presupuesto__paragraph">Nuestra
-                        ubicación central nos permite trabajar con clientes en toda la región, brindando servicios de
-                        diseño de interiores de alta calidad y soluciones personalizadas para hogares, oficinas y
-                        espacios comerciales.
+            <div class="container">
+                <h2 class="subtitle">Insertar imágenes en el blog</h2>
+                <form action="../blog.html" class="form__imputs1" method="post">
 
-                        Nuestras instalaciones están diseñadas para brindar un ambiente cómodo y acogedor a nuestros
-                        clientes. Desde el momento en que ingresas a nuestra oficina, te sentirás como en casa. Contamos
-                        con una amplia variedad de muestras de materiales y productos para que puedas ver y tocar, así
-                        como también para inspirarte en la creación de tu propio espacio de ensueño.</p>
-                </div>
+                    <p>
+                        <label for="titulo" class="colocar_titulo">Título
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_titulo" id="titulo" required="obligatorio" class="form__imput" placeholder="Título">
+                    </p>
 
-                <figure class="presupuesto__picture">
-                    <div class="mapa" id="map"></div>
-                </figure>
+                    <p>
+                        <label for="comentario" class="colocar_comentario">Mensaje
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <textarea name="introducir_comentario" class="form__imput1" id="comentario" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                    </p>
+
+                    <p>
+                        <label for="foto_blog" class="colocar_foto_blog">Selecciona una imagen con tamaño inferior a 5mb
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="file" name="introducir_foto_blog" id="foto_blog" required="obligatorio" class="" placeholder="Título">
+                    </p>
+
+                    <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
+                        <p>Enviar</p>
+                    </button>
+
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>
+
+
+                </form>
+                <?php
+                include("formulario_contacto.php");
+                ?>
+
             </div>
+
         </section>
 
         <section class="servicios container">
