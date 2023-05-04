@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/mediaqueries.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
@@ -17,7 +16,7 @@
 
 <body>
 
-    <header class="hero hero4">
+    <header class="hero hero2">
         <nav class="nav container">
             <div class="nav__logo">
                 <h2 class="nav__titulo">Espacio interior</h2>
@@ -42,7 +41,6 @@
                 <li class="nav__items">
                     <a href="" id="inicioDeSesion" class="nav__links"><img src="imagenes/iniciosesion.svg"></a>
                 </li>
-
                 <img src="imagenes/salirmenu.svg" class="nav__close">
             </ul>
             <div class="nav__menu">
@@ -96,84 +94,116 @@
             </div>
         </aside>
 
-        <section class="container about">
-            <h2 class="subtitle">Solicita un presupuesto personalizado para la decoración de tu hogar u oficina</h2>
-            <p class="about paragraph">En Espacio Interior, nos encanta ayudar a nuestros clientes a crear espacios
-                únicos y personalizados que reflejen su estilo y necesidades. Si estás buscando transformar tu hogar
-                o
-                lugar de trabajo en un espacio acogedor y funcional, has llegado al lugar indicado. Completa el
-                siguiente formulario para recibir un presupuesto personalizado que se ajuste a tus requerimientos y
-                presupuesto. ¡Estamos ansiosos por comenzar a trabajar contigo y hacer realidad tus ideas de
-                decoración!
-            </p>
-        </section>
+        <section class="servicios container">
+            <h2 class="subtitle">Blog</h2>
+            <p class="about paragraph">Artículos y consejos sobre tendencias de decoración, técnicas de diseño,
+                soluciones creativas y otras ideas relacionadas con el tema. Los artículos incluyen fotografías y una
+                descripción que ilustran ejemplos prácticos.</p>
 
-        <section class="formulario">
-            <div class="container">
-                <form class="form__imputs1" method="post">
-                    <p>
-                        <label for="nombre" class="colocar_nombre">Nombre
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
-                            class="form__imput" placeholder="Escribe tu nombre">
-                    </p>
+            <div class="servicios__table">
 
-                    <p>
-                        <label for="email" class="colocar_email">Email
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio"
-                            class="form__imput" placeholder="Escribe tu Email">
-                    </p>
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">Cocina</h3>
+                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
+                        expuesta y ventana que proporciona iluminación natural.</p>
+                    <div class="servicios__items">
+                        <img src="imagenes/cocina.jpg" class="servicios__foto">
+                    </div>
+                    <a href="#" class="servicios__cta">Ver artículo</a>
+                </div>
 
-                    <p>
-                        <label for="tipo" class="colocar_tipo">Tipo de decoración
-                        </label>
-                        <select name="introducir_tipo" class="form__imput" id="tipo">
-                            <option value="">Selecciona el tipo de decoración que necesitas</option>
-                            <option value="oficinas">Oficinas</option>
-                            <option value="viviendas">Viviendas</option>
-                            <option value="locales">Locales</option>
-                        </select>
-                    </p>
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">Salón</h3>
+                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
+                        expuesta y ventana que proporciona iluminación natural.</p>
+                    <div class="servicios__items">
+                        <img src="imagenes/salon.jpg" class="servicios__foto">
+                    </div>
+                    <a href="blog.html" class="servicios__cta">Ver artículo</a>
+                </div>
 
-                    <p>
-                        <label for="catalogo" class="colocar_catalogo">Cátalogo
-                        </label>
-                        <select name="introducir_catalogo" class="form__imput" id="catalogo">
-                            <option value="">Selecciona un artículo del cátalogo</option>
-                            <option value="sillas">Sillas</option>
-                            <option value="mesas">Mesas</option>
-                            <option value="sofas">Sofás</option>
-                            <option value="cortinas">Cortinas</option>
-                            <option value="toldos">Toldos</option>
-                            <option value="camas">Camas</option>
-                            <option value="cabeceros">Cabeceros</option>
-                            <option value="muebles">Muebles</option>
-                            <option value="encimeras">Encimeras</option>
-                        </select>
-                    </p>
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">Salón</h3>
+                    <p class="servicios__name">Salón acogedor con paredes beige, sofá cómodo, iluminación suave y
+                        estantería rústica llena de libros y adornos.</p>
+                    <div class="servicios__items">
+                        <img src="imagenes/salon1.jpg" class="servicios__foto">
+                    </div>
+                    <a href="blog.html" class="servicios__cta">Ver artículo</a>
+                </div>
 
-                    <p>
-                        <label for="mensaje" class="colocar_mensaje">Mensaje
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <textarea name="introducir_mensaje" class="form__imput1" id="mensaje" required="obligatorio"
-                            placeholder="Deja aquí tu comentario..."></textarea>
-                    </p>
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">Salón</h3>
+                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
+                        expuesta y ventana que proporciona iluminación natural.</p>
+                    <div class="servicios__items">
+                        <img src="imagenes/salon2.jpg" class="servicios__foto">
+                    </div>
+                    <a href="blog.html" class="servicios__cta">Ver artículo</a>
+                </div>
 
-                    <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
-                        <p>Enviar</p>
-                    </button>
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">Salón</h3>
+                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
+                        expuesta y ventana que proporciona iluminación natural.</p>
+                    <div class="servicios__items">
+                        <img src="imagenes/salon3.jpg" class="servicios__foto">
+                    </div>
+                    <a href="blog.html" class="servicios__cta">Ver artículo</a>
+                </div>
 
-                    <p class="aviso">
-                        <span class="obligatorio"> * </span>los campos son obligatorios.
-                    </p>
-                </form>
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">Salón</h3>
+                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
+                        expuesta y ventana que proporciona iluminación natural.</p>
+                    <div class="servicios__items">
+                        <img src="imagenes/salon.jpg" class="servicios__foto">
+                    </div>
+                    <a href="blog.html" class="servicios__cta">Ver artículo</a>
+                </div>
+
+                <div class="servicios__element">
+                    <h3 class="servicios__servicios">Salón</h3>
+                    <p class="servicios__name">Cocina moderna con isla central de mármol, armarios blancos, vajilla
+                        expuesta y ventana que proporciona iluminación natural.</p>
+                    <div class="servicios__items">
+                        <img src="imagenes/salon1.jpg" class="servicios__foto">
+                    </div>
+                    <a href="blog.html" class="servicios__cta">Ver artículo</a>
+                </div>
+
+                <?php
+        // Conexión a la base de datos
+        $conexion = mysqli_connect("localhost", "root", "", "espacio_interior");
+
+        // Consulta para obtener los artículos
+        $query = "SELECT * FROM guardar_blog ORDER BY fecha DESC";
+        $resultado = mysqli_query($conexion, $query);
+
+        // Iteración sobre los resultados de la consulta
+        while ($fila = mysqli_fetch_array($resultado)) {
+            $titulo = $fila["titulo"];
+            $descripcion = $fila["mensaje"];
+            $imagen = $fila["imagen"];
+            $url = "articulo.php?id=" . $fila["id"];
+
+            // Creación del elemento HTML para cada artículo
+            echo '<div class="servicios__element">
+                    <h3 class="servicios__servicios">' . $titulo . '</h3>
+                    <p class="servicios__name">' . $descripcion . '</p>
+                    <div class="servicios__items">
+                        <img src="imagenesBlog/' . $imagen . '" class="servicios__foto">
+                    </div>
+                    <a href="' . $url . '" class="servicios__cta">Ver artículo</a>
+                  </div>';
+        }
+
+        // Cierre de la conexión a la base de datos
+        mysqli_close($conexion);
+        ?>
+
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
@@ -188,7 +218,7 @@
                         <a href="sobrenosotros.html" class="nav__links">Sobre nosotros</a>
                     </li>
                     <li class="nav__items">
-                        <a href="contacto.html" class="nav__links">Contacto</a>
+                        <a href="formulario.php" class="nav__links">Contacto</a>
                     </li>
                     <li class="nav__items">
                         <a href="presupuesto.html" class="nav__links">presupuesto</a>
@@ -221,9 +251,7 @@
     <script src="js/app.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/presupuesto.js"></script>
-
+    <script src="js/galeria.js"></script>
 </body>
-
 
 </html>
