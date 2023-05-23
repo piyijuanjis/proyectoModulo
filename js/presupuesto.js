@@ -1,3 +1,5 @@
+
+document.addEventListener('DOMContentLoaded', function () {
     // Aquí vamos a generar el código para q en el placeholder de mensaje me rellene con lo q he seleccionado en los selects
     const tipoSelect = document.getElementById('tipo');
     const catalogoSelect = document.getElementById('catalogo');
@@ -19,3 +21,4 @@
         // establece el texto concatenado como el placeholder del campo de texto
         mensajeInput.placeholder = texto;
     }
+});

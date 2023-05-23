@@ -15,12 +15,14 @@
 
 <body>
 
+
     <?php
     session_start();
     if (!isset($_SESSION["introducir_email"])) {
-        header("location:index.html");
+        header("location:index.php");
     }
     ?>
+
 
     <header class="hero hero5">
         <nav class="nav container">
@@ -43,6 +45,9 @@
             <p class="hero__paragraph">Esta zona es exclusiva para administradores.</p>
         </section>
     </header>
+    <?php
+    include("guardar_blog.php");
+    ?>
 
     <main>
 
@@ -96,91 +101,157 @@
             </div>
         </section>
 
+
+
         <section class="formulario">
-
             <div class="container">
-                <h2 class="subtitle">Insertar imágenes en el blog</h2>
-                <form action="../blog.html" class="form__imputs1" method="post">
+                <div class="container about">
+                    <h2 class="subtitle">Artículos de la galería</h2>
+                    <div class="form-container2">
+                        <table class="estilo_tabla">
+                            <tr>
+                                <th>Título</th>
+                                <th>Descripción</th>
+                                <th>Imagen</th>
+                                <th>Acciones</th>
+                            </tr>
+                            <?php
+                            include("conexion.php");
 
-                    <p>
-                        <label for="titulo" class="colocar_titulo">Título
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="text" name="introducir_titulo" id="titulo" required="obligatorio" class="form__imput" placeholder="Título">
-                    </p>
+                            // Consulta para obtener los artículos
+                            $query = "SELECT * FROM guardar_blog ORDER BY fecha DESC";
+                            $resultado = mysqli_query($conexion, $query);
 
-                    <p>
-                        <label for="comentario" class="colocar_comentario">Mensaje
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <textarea name="introducir_comentario" class="form__imput1" id="comentario" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
-                    </p>
+                            // Iteración sobre los resultados de la consulta
+                            while ($fila = mysqli_fetch_array($resultado)) {
+                                $id = $fila["id"];
+                                $titulo = $fila["titulo"];
+                                $descripcion = $fila["mensaje"];
+                                $imagen = $fila["imagen"];
 
-                    <p>
-                        <label for="foto_blog" class="colocar_foto_blog">Selecciona una imagen con tamaño inferior a 5mb
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="file" name="introducir_foto_blog" id="foto_blog" required="obligatorio" class="" placeholder="Título">
-                    </p>
+                                // Ruta de la imagen
+                                $rutaImagen = "../imagenes/img/" . basename($imagen);
+                            ?>
+                                <tr>
+                                    <td class="estilo_celda"><?php echo $titulo; ?></td>
+                                    <td class="estilo_celda"><?php echo $descripcion; ?></td>
+                                    <td class="estilo_celda"><img src="<?php echo $rutaImagen; ?>" class="imagen_tabla"></td>
+                                    <td class="estilo_celda"><a class="ctaEliminar" href="?eliminar=<?php echo $id; ?>">Eliminar</a></td>
 
-                    <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
-                        <p>Enviar</p>
-                    </button>
+                                </tr>
+                            <?php
+                            }
 
-                    <p class="aviso">
-                        <span class="obligatorio"> * </span>los campos son obligatorios.
-                    </p>
+                            // Verificación de si se ha enviado el parámetro 'eliminar'
+                            if (isset($_GET['eliminar'])) {
+                                $idEliminar = $_GET['eliminar'];
+                                // Eliminar el artículo de la base de datos
+                                $eliminarQuery = "DELETE FROM guardar_blog WHERE id = $idEliminar";
+                                mysqli_query($conexion, $eliminarQuery);
+                            }
 
+                            // Cierre de la conexión a la base de datos
+                            mysqli_close($conexion);
+                            ?>
+                        </table>
+                    </div>
+                    <h2 class="subtitle">Insertar imágenes en la galería</h2>
+                    <form enctype="multipart/form-data" class="form__imputs1" method="post" id="mi-formulario">
 
-                </form>
-                <?php
-                include("formulario_contacto.php");
-                ?>
+                        <p>
+                            <label for="titulo" class="colocar_titulo">Título
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducir_titulo" id="titulo" required="obligatorio" class="form__imput" placeholder="Título">
+                        </p>
 
-            </div>
+                        <p>
+                            <label for="comentario" class="colocar_comentario">Mensaje
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <textarea name="introducir_comentario" class="form__imput1" id="comentario" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                        </p>
 
+                        <p>
+                            <label for="foto_blog" class="colocar_foto_blog">Selecciona una imagen con tamaño inferior a 5mb
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="file" name="introducir_foto_blog" id="foto_blog" required="obligatorio" class="" placeholder="Título">
+                        </p>
+
+                        <button type="submit" name="enviar_formulario" class="form__submit" id="enviar">
+                            <p>Enviar</p>
+                        </button>
+
+                        <p class="aviso">
+                            <span class="obligatorio"> * </span>los campos son obligatorios.
+                        </p>
+
+                    </form>
+                </div>
         </section>
 
-        <section class="servicios container">
+        <section class="container about">
+            <h2 class="subtitle">Formularios de presupuestos</h2>
+            <div class="form-container1">
+                <table class="estilo_tabla">
+                    <tr>
+                        <th>Nº cliente</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Tipo</th>
+                        <th>catálogo</th>
+                        <th>Mensaje</th>
+                        <th>Fecha</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <?php
+                    include("conexion.php");
+                    if (isset($_GET['eliminar'])) {
+                        $id = $_GET['eliminar'];
+                        $eliminar = "DELETE FROM formulario_presupuesto WHERE id = $id";
+                        mysqli_query($conexion, $eliminar);
+                    }
 
-            <div class="servicios__table">
-
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">NUESTRA EXPERIENCIA</h3>
-                    <div class="servicios__items">
-                        <p class="servicios__features">Con más de 20 años de experiencia en el campo de la decoración de
-                            interiores, podemos decir con orgullo que hemos visto todo y hecho todo. Nuestro equipo de
-                            profesionales altamente capacitados ha trabajado en una amplia variedad de proyectos de
-                            decoración de interiores, desde hogares hasta oficinas y espacios comerciales.</p>
-                    </div>
-
-                </div>
-
-                <div class="servicios__element servicios__element--best">
-                    <h3 class="servicios__servicios">ESPECIALISTAS EN</h3>
-                    <div class="servicios__items">
-                        <p class="servicios__features">Nos especializamos en diseños modernos y elegantes que combinan
-                            la funcionalidad con la belleza. Nos esforzamos por crear espacios únicos que reflejen la
-                            individualidad de nuestros clientes. Para lograrlo, trabajamos con una amplia variedad de
-                            estilos y materiales de decoración, desde lo tradicional hasta lo contemporáneo, pasando por
-                            lo rústico y lo minimalista.</p>
-                    </div>
-
-                </div>
-
-                <div class="servicios__element">
-                    <h3 class="servicios__servicios">NUESTROS SERVICIOS</h3>
-                    <div class="servicios__items">
-                        <p class="servicios__features">Ofrecemos una amplia variedad de servicios de decoración de
-                            interiores para satisfacer las necesidades de nuestros clientes. Desde el diseño de espacios
-                            interiores hasta la selección de colores y materiales, nuestro equipo
-                            trabaja con nuestros clientes para crear soluciones personalizadas que reflejen su
-                            estilo y personalidad.</p>
-                    </div>
-
-                </div>
+                    if ($conexion) {
+                        $consulta = "SELECT * FROM formulario_presupuesto";
+                        $resultado = mysqli_query($conexion, $consulta);
+                        if ($resultado) {
+                            while ($row = $resultado->fetch_array()) {
+                                $id = $row['id'];
+                                $nombre = $row['nombre'];
+                                $email = $row['email'];
+                                $tipo = $row['tipo'];
+                                $catalogo = $row['catalogo'];
+                                $mensaje = $row['mensaje'];
+                                $fecha = $row['fecha'];
+                    ?>
+                                <tr>
+                                    <td class="estilo_celda"><?php echo $id; ?></td>
+                                    <td class="estilo_celda"><?php echo $nombre; ?></td>
+                                    <td class="estilo_celda"><?php echo $email; ?></td>
+                                    <td class="estilo_celda"><?php echo $tipo; ?></td>
+                                    <td class="estilo_celda"><?php echo $catalogo; ?></td>
+                                    <td class="estilo_celda"><?php echo $mensaje; ?></td>
+                                    <td class="estilo_celda"><?php echo $fecha; ?></td>
+                                    <td>
+                                        <div class="botones">
+                                            <a class="ctaEliminar" href="?eliminar=<?php echo $id; ?>">Eliminar</a>
+                                            <a class="ctaResponder" href="mailto:<?php echo $email; ?>" class="btn btn-primary">Responder</a>
+                                            <input type="text" class="form__imput" placeholder="Precio:">
+                                        </div>
+                                    </td>
+                                </tr>
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
+                </table>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -193,13 +264,6 @@
                     </li>
                 </ul>
             </nav>
-            <form class="footer__form">
-                <h2 class="footer__newsletter">Nos ponemos en contacto contigo</h2>
-                <div class="footer__imputs">
-                    <input type="email" name="Email" placeholder="Email:" class="footer__imput">
-                    <input type="submit" value="Empieza tu decoración ya" class="footer__submit">
-                </div>
-            </form>
         </section>
 
         <section class="footer__copy container">
